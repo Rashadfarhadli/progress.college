@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />">
+    <link rel="stylesheet" href="style.css">
+    <title>Progress College</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Hero bölməsindəki yazının animasiyası */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes bgAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        .fade-in {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .bg-animated {
+            background-image: url(https://www.scholastic.com/content/dam/scholastic/educators/articles/teacher-start-lesson-16-9.jpg.corpimagerendition.xxl.1400.788.png);
+            background-size: cover;
+            object-fit: cover;
+            
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-gradient-to-r from-blue-500 to-purple-500 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="text-2xl font-bold text-white">Progress College</div>
+
+                <!-- Navbar links -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="#" class="text-white hover:text-yellow-300 hover:scale-110 transition duration-300">Ana səhifə</a>
+                    <a href="#" class="text-white hover:text-yellow-300 hover:scale-110 transition duration-300">Kurslar</a>
+                    <a href="#" class="text-white hover:text-yellow-300 hover:scale-110 transition duration-300">Müəllimlər</a>
+                    <a href="#" class="text-white hover:text-yellow-300 hover:scale-110 transition duration-300">Əlaqə</a>
+                    
+                </div>
+
+                <!-- Mobil menyu düyməsi -->
+                <button id="mobile-menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
+                    ☰
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobil menyu (gizli) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white p-4 space-y-2">
+            <a href="#" class="block text-gray-700 hover:text-blue-600 transition duration-300">Ana səhifə</a>
+            <a href="#" class="block text-gray-700 hover:text-blue-600 transition duration-300">Kurslar</a>
+            <a href="#" class="block text-gray-700 hover:text-blue-600 transition duration-300">Müəllimlər</a>
+            <a href="#" class="block text-gray-700 hover:text-blue-600 transition duration-300">Əlaqə</a>
+        </div>
+    </nav>
+
+    <!-- Hero Bölmə -->
+    <section class="relative h-screen flex items-center justify-center text-center text-white bg-animated">
+        <div>
+            <h1 class="text-5xl md:text-6xl font-bold fade-in">Progress College</h1>
+            <p class="text-lg md:text-2xl mt-4 fade-in">Sizin gələcəyiniz üçün ən yaxşı seçim!</p>
+            <a href="#" class="mt-6 inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold text-lg hover:bg-yellow-300 hover:text-black transition duration-300 fade-in">Ətraflı</a>
+        </div>
+    </section>
+
+    <script>
+        // Mobil menyunu açıb bağlamaq üçün skript
+        document.getElementById('mobile-menu-btn').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+    <!-- Kurs Kartları Bölməsi -->
+    <section class="max-w-6xl mx-auto text-center">
+        <h2 class="text-4xl font-bold text-blue-600 mb-8">Bizim Kurslar</h2>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- İngilis Dili Kartı -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 cursor-pointer" onclick="toggleInfo('english-info')">
+                <img src="https://britishacademy.az/file/75/file75.jpg" class="rounded-md w-full mb-4" alt="İngilis dili">
+                <h3 class="text-xl font-bold text-gray-800">İngilis Dili</h3>
+                <p class="text-gray-600 mt-2">Həftənin 3 günü, 09:00-11:00</p>
+                <div id="english-info" class="hidden mt-4 fade-in text-gray-700">
+                    📚 *İngilis dili kursu* sizə danışıq və qrammatika üzrə geniş biliklər qazandıracaq!
+                </div>
+            </div>
+
+            <!-- Rus Dili Kartı -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 cursor-pointer" onclick="toggleInfo('russian-info')">
+                <img src="https://britishacademy.az/file/74/file74." class="rounded-md w-full mb-4" alt="Rus dili">
+                <h3 class="text-xl font-bold text-gray-800">Rus Dili</h3>
+                <p class="text-gray-600 mt-2">Həftənin 3 günü, 13:00-14:00</p>
+                <div id="russian-info" class="hidden mt-4 fade-in text-gray-700">
+                    📚 *Rus dili kursu* sizə gündəlik ünsiyyət və işgüzar rus dili bilikləri öyrədəcək!
+                </div>
+            </div>
+
+            <!-- Riyaziyyat Kartı -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 cursor-pointer" onclick="toggleInfo('math-info')">
+                <img src="https://play-lh.googleusercontent.com/GqhVutUA-IDVhhl2eq2w0P8DWJFWQJyNb1GA_fGvFnWCF6FHywRYMiyA3bSnH40_Fg=w240-h480-rw" class="rounded-md w-full mb-4" alt="Riyaziyyat">
+                <h3 class="text-xl font-bold text-gray-800">Riyaziyyat</h3>
+                <p class="text-gray-600 mt-2">Həftənin 3 günü, 16:00-19:00</p>
+                <div id="math-info" class="hidden mt-4 fade-in text-gray-700">
+                    📚 *Riyaziyyat kursu* sizə riyazi məntiq və problemlərin həlli bacarıqları qazandıracaq!
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 cursor-pointer" onclick="toggleInfo('aze-info')">
+                <img src="https://kurslar.az/uploads/news/172156625369471669d042d673c0.jpg" class="rounded-md w-full mb-4" alt="Azərbaycan">
+                <h3 class="text-xl font-bold text-gray-800">Azərbaycan Dili</h3>
+                <p class="text-gray-600 mt-2">Həftənin 3 günü, 16:00-19:00</p>
+                <div id="aze-info" class="hidden mt-4 fade-in text-gray-700">
+                    📚 *Azərbaycan Dili Kursu* sizə qramatik cəhətdən daha üstün biliklər öyrədəcək!
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 cursor-pointer" onclick="toggleInfo('edeb-info')">
+                <img src="https://lh4.googleusercontent.com/proxy/cAth3hyEKZGH6TNomjZkK1EdOnrRHcEZF0rsZLR029z20MEEbVItcoG-dZg6dFchHv_O2uX_5uMp0Mja5GM4dvnLUMIUyQ" class="rounded-md w-full mb-4" alt="Ədəbiyyat">
+                <h3 class="text-xl font-bold text-gray-800">Ədəbiyyat</h3>
+                <p class="text-gray-600 mt-2">Həftənin 3 günü, 16:00-19:00</p>
+                <div id="edeb-info" class="hidden mt-4 fade-in text-gray-700">
+                    📚 *Ədəbiyyat kursu* insanın, cəmiyyətin hisslərini, emosiyalarını, düşüncələrini, arzu və istəklərini obrazlı şəkildə əks etdirmədə köməklik göstərəcək!
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 cursor-pointer" onclick="toggleInfo('resm-info')">
+                <img src="https://tehsil.com.az/wp-content/uploads/2022/08/resm-kurslari.jpg" class="rounded-md w-full mb-4" alt="Resm">
+                <h3 class="text-xl font-bold text-gray-800">Rəsm</h3>
+                <p class="text-gray-600 mt-2">Həftənin 3 günü, 16:00-19:00</p>
+                <div id="resm-info" class="hidden mt-4 fade-in text-gray-700">
+                    📚 *Rəsm Kursu*  Rənglərin insan davranışı, psixologiya və mədəniyyət üzərində olan təsiri müəyyənləşdirmək, onların dünyasına necə baxdığımızı anlamağa kömək edəcək!
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleInfo(id) {
+            document.getElementById(id).classList.toggle('hidden');
+        }
+    </script>
+
+    <!-- 2-ci Bölmə: Kurs Faydaları -->
+    <section class="max-w-6xl mx-auto text-center mt-16 bg-blue-500 text-white p-10 rounded-lg shadow-lg fade-in">
+        <h2 class="text-4xl font-bold">Niyə Progress College?</h2>
+        <div class="grid md:grid-cols-3 gap-8 mt-6">
+            <div class="p-4 bg-blue-600 rounded-lg hover:bg-yellow-300 hover:text-black transition duration-300">
+                📚 Peşəkar müəllimlər
+            </div>
+            <div class="p-4 bg-blue-600 rounded-lg hover:bg-yellow-300 hover:text-black transition duration-300">
+                🎯 Fərdi və qrup dərsləri
+            </div>
+            <div class="p-4 bg-blue-600 rounded-lg hover:bg-yellow-300 hover:text-black transition duration-300">
+                🏆 Beynəlxalq sertifikatlar
+            </div>
+        </div>
+    </section>
+
+    <!-- 1-ci Bölmə: Tələbə Rəyləri -->
+    <section class="max-w-6xl mx-auto text-center mt-12">
+        <h2 class="text-4xl font-bold text-blue-600 mb-8">Tələbə Rəyləri</h2>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 fade-in">
+                <p class="text-gray-700">"Progress College-də ingilis dili öyrəndim və indi sərbəst danışa bilirəm!"</p>
+                <h4 class="mt-4 text-lg font-semibold text-gray-900">- Aysel Məmmədova</h4>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 fade-in">
+                <p class="text-gray-700">"Buradakı müəllimlər çox peşəkardır. Kursları hər kəsə tövsiyə edirəm!"</p>
+                <h4 class="mt-4 text-lg font-semibold text-gray-900">- Elvin Quliyev</h4>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 fade-in">
+                <p class="text-gray-700">"Riyaziyyat dərsləri mənə olimpiadalara hazırlaşmağa kömək etdi!"</p>
+                <h4 class="mt-4 text-lg font-semibold text-gray-900">- Leyla Həsənova</h4>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 fade-in">
+                <p class="text-gray-700">"Dərslər peşəkar müəllimlər tərəfindən aparılır.Yaxşı ki buranı tapmışam !"</p>
+                <h4 class="mt-4 text-lg font-semibold text-gray-900">- Rəşad Fərhadov</h4>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 fade-in">
+                <p class="text-gray-700">"Bir sözlə möhtəşəmsizzz!"</p>
+                <h4 class="mt-4 text-lg font-semibold text-gray-900">- Aydın Əkbərli</h4>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 fade-in">
+                <p class="text-gray-700">" Uğurlarımı bura borcluyam !"</p>
+                <h4 class="mt-4 text-lg font-semibold text-gray-900">- Nərmin Məmmədli</h4>
+            </div>
+        </div>
+    </section>
+    
+    <section class="footersec">
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-2xl font-semibold">Bizimlə Əlaqə</h2>
+    
+            <div class="mt-4 flex flex-wrap justify-center gap-6">
+                <!-- Telefon -->
+                <a href="tel:+994501234567" class="flex items-center gap-2 hover:text-yellow-400 transition duration-300">
+                    📞 +994 51 629 16 86 
+                </a>
+    
+    
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/progress.college" target="_blank" class="flex items-center gap-2 hover:text-pink-400 transition duration-300">
+                    📷 Instagram
+                </a>
+    
+                <!-- Location -->
+                <a href="https://www.google.com/maps/place/M%C9%99zahir+R%C3%BCst%C9%99mov+k%C3%BC%C3%A7%C9%99si+155/@40.385831,49.961966,17z/data=!3m1!4b1!4m6!3m5!1s0x4030636f5a018be1:0xe23eaaf78ec0293!8m2!3d40.385831!4d49.961966!16s%2Fg%2F11s641_mmf?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="flex items-center gap-2 hover:text-blue-400 transition duration-300">
+                    📍 Məzahir  Rüstəmov küçəsi,Bakı, Azərbaycan
+                </a>
+            </div>
+    
+            <p class="mt-6 text-gray-400 text-sm">© 2025 Progress College. Bütün hüquqlar qorunur.</p>
+        </div>
+    </footer>
+</section>
+
+
+
+
+
+</body>
+</html>
