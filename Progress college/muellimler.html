@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="muellimler.css">
+    <title>Müəllimlər</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <nav class="bg-gradient-to-r from-blue-500 to-purple-500 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <!-- Loogo yeri-->
+                <div class="text-2xl font-bold text-white">Progress College</div>
+                  
+                <!-- linkler -->
+                 <section class="navbar">
+                <div class="hidden md:flex space-x-6">
+                    <a href="index.html" class="text-white hover:text-yellow-300 hover:scale-110 transition duration-300">Ana səhifə</a>
+                    <a href="neticeler.html" class="text-white hover:text-yellow-300 hover:scale-110 transition duration-300">Nəticələr</a>
+                    <a href="muellimler.html" class="text-white hover:text-yellow-300 hover:scale-110 transition duration-300">Müəllimlər</a>
+                    <a href="contact.html" class="text-white hover:text-yellow-300 hover:scale-110 transition duration-300">Əlaqə</a>
+                    
+                </div>
+                  </section>
+                <!-- responsivlik -->
+                <button id="mobile-menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
+                    ☰
+                </button>
+            </div>
+        </div>
+
+        <!-- telefon ucun gamburger menyu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white p-4 space-y-2">
+            <a href="index.html" class="block text-gray-700 hover:text-blue-600 transition duration-300">Ana səhifə</a>
+            <a href="neticeler.html" class="block text-gray-700 hover:text-blue-600 transition duration-300">Nəticələr</a>
+            <a href="muellimler.html" class="block text-gray-700 hover:text-blue-600 transition duration-300">Müəllimlər</a>
+            <a href="contact.html" class="block text-gray-700 hover:text-blue-600 transition duration-300">Əlaqə</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+     <div class="Muellim">
+    <header class="bg-blue-600 text-white py-5 text-center">
+        <h1 class="text-3xl font-bold">Müəllimlərimiz</h1>
+        <p class="text-lg">Təcrübəli və peşəkar müəllimlərimizlə tanış olun</p>
+    </header>
+     </div>
+    <!-- Müəllimlər Bölməsi -->
+    <section class="max-w-6xl mx-auto py-10">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Müəllim Kartı (10 dəfə təkrarlanacaq) -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden transition transform hover:scale-105">
+                <img src="https://storage.googleapis.com/schoolnet-content/blog/wp-content/uploads/2022/05/What-are-the-Different-Types-of-Teacher-Training-Programs.jpg" alt="Müəllim" class="w-full h-60 object-cover">
+                <div class="p-5">
+                    <h2 class="text-xl font-semibold text-gray-800">Ad Soyad</h2>
+                    <p class="text">İngilis dili müəllimi</p>
+                    <p class="mt-2 text-sm text-gray-500">10 il iş təcrübəsi</p>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden transition transform hover:scale-105">
+                <img src="https://www.uni-erfurt.de/fileadmin/_processed_/1/3/csm_Master-Studium-Regelschule-Lehramt-Uni-Erfurt_e0030ef9ce.webp" alt="Müəllim" class="w-full h-60 object-cover">
+                <div class="p-5">
+                    <h2 class="text-xl font-semibold text-gray-800">Ad Soyad</h2>
+                    <p class="text-gray-600">Rus dili müəllimi</p>
+                    <p class="mt-2 text-sm text-gray-500">8 il iş təcrübəsi</p>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden transition transform hover:scale-105">
+                <img src="https://media.licdn.com/dms/image/v2/D4E12AQHSOBLtGV5Nkg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1700493417938?e=2147483647&v=beta&t=a31aG-CaiyQ0h-1G_y6hHYjSs7ZXQn5Bi6ni830QlU0" alt="Müəllim" class="w-full h-60 object-cover">
+                <div class="p-5">
+                    <h2 class="text-xl font-semibold text-gray-800">Ad Soyad</h2>
+                    <p class="text-gray-600">Azərbaycan dili müəllimi</p>
+                    <p class="mt-2 text-sm text-gray-500">6 il iş təcrübəsi</p>
+                </div>
+                
+            </div>
+
+            <!-- Burada digər 7 müəllimi eyni formatda əlavə edə bilərsən -->
+        </div>
+    </section>
+
+    <!-- Əlavə Maraqlı Bölmə: Müəllimlərin Fikirləri -->
+    <section class="bg-blue-50 py-10">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-2xl font-bold text-gray-800">Müəllimlərin Düşüncələri</h2>
+            <p class="text-gray-600 mt-2">Müəllimlərimizin tədris haqqında fikirləri</p>
+            <div class="mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-5 shadow-md rounded-md">
+                    <p class="text-gray-700">"Təhsil insanın həyatını dəyişir. Şagirdlərimizlə hər gün yeni bir dünya kəşf edirik!"</p>
+                    <span class="text-sm text-gray-500">- İngilis dili müəllimi</span>
+                </div>
+                <div class="bg-white p-5 shadow-md rounded-md">
+                    <p class="text-gray-700">"Dil öyrənmək insanı daha açıq və dünyagörüşlü edir. Bunun bir parçası olmaq möhtəşəmdir."</p>
+                    <span class="text-sm text-gray-500">- Rus dili müəllimi</span>
+                </div>
+                <div class="bg-white p-5 shadow-md rounded-md">
+                    <p class="text-gray-700">"Hər kəsə öz ana dilini dərindən öyrətmək mənim üçün böyük qürurdur."</p>
+                    <span class="text-sm text-gray-500">- Azərbaycan dili müəllimi</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footersec">
+        <footer class="bg-gray-900 text-white py-8">
+            <div class="max-w-6xl mx-auto text-center">
+                <h2 class="text-2xl font-semibold">Bizimlə Əlaqə</h2>
+        
+                <div class="mt-4 flex flex-wrap justify-center gap-6">
+                    <!-- Telefon -->
+                    <a href="tel:+994501234567" class="flex items-center gap-2 hover:text-yellow-400 transition duration-300">
+                        📞 +994 51 629 16 86 
+                    </a>
+        
+        
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/progress.college" target="_blank" class="flex items-center gap-2 hover:text-pink-400 transition duration-300">
+                        📷 Instagram
+                    </a>
+        
+                    <!-- Location -->
+                    <a href="https://www.google.com/maps/place/M%C9%99zahir+R%C3%BCst%C9%99mov+k%C3%BC%C3%A7%C9%99si+155/@40.385831,49.961966,17z/data=!3m1!4b1!4m6!3m5!1s0x4030636f5a018be1:0xe23eaaf78ec0293!8m2!3d40.385831!4d49.961966!16s%2Fg%2F11s641_mmf?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="flex items-center gap-2 hover:text-blue-400 transition duration-300">
+                        📍 Məzahir  Rüstəmov küçəsi,Bakı, Azərbaycan
+                    </a>
+                </div>
+        
+                <p class="mt-6 text-gray-400 text-sm">© 2025 Progress College. Bütün hüquqlar qorunur.</p>
+            </div>
+        </footer>
+    </section>
+</body>
+</html>
