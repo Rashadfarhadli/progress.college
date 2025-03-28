@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Əlaqə - Progress College</title>
+    <link rel="stylesheet" href="contact.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <nav class="bg-gradient-to-r from-blue-500 to-purple-500 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <!-- Loogo yeri-->
+                <div class="text-2xl font-bold text-white">Progress College</div>
+
+                <!-- linkler -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="index.html" class="text-white hover:text-yellow-300 hover:scale-110 transition duration-300">Ana səhifə</a>
+                    <a href="#" class="text-white hover:text-yellow-300 hover:scale-110 transition duration-300">Kurslar</a>
+                    <a href="#" class="text-white hover:text-yellow-300 hover:scale-110 transition duration-300">Müəllimlər</a>
+                    <a href="contact.html" class="text-white hover:text-yellow-300 hover:scale-110 transition duration-300">Əlaqə</a>
+                    
+                </div>
+
+                <!-- responsivlik -->
+                <button id="mobile-menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
+                    ☰
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white p-4 space-y-2">
+            <a href="index.html" class="block text-gray-700 hover:text-blue-600 transition duration-300">Ana səhifə</a>
+            <a href="#" class="block text-gray-700 hover:text-blue-600 transition duration-300">Kurslar</a>
+            <a href="#" class="block text-gray-700 hover:text-blue-600 transition duration-300">Müəllimlər</a>
+            <a href="contact.html" class="block text-gray-700 hover:text-blue-600 transition duration-300">Əlaqə</a>
+        </div>
+    </nav>
+    
+    <!-- Contrakt bolmesi -->
+    <section class="max-w-6xl mx-auto text-center py-12">
+        <h2 class="text-4xl font-bold text-blue-600 mb-6">Bizimlə Əlaqə</h2>
+        <p class="text-gray-700 text-lg">Sualınız var? Bizimlə əlaqə saxlayın!</p>
+
+        <div class="grid md:grid-cols-2 gap-12 mt-8">
+            <!-- Əlaqə Məlumatları -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-semibold text-gray-900">Əlaqə Məlumatları</h3>
+                <p class="mt-4 text-gray-700">📞 Telefon: <a href="tel:+994516291686" class="text-blue-600 hover:underline">+994 50 123 45 67</a></p>
+                <p class="mt-2 text-gray-700">📧 Email: <a href="www.progresscollege@gmail.com" class="text-blue-600 hover:underline">info@progresscollege.az</a></p>
+                <p class="mt-2 text-gray-700">📍 Ünvan:   Bakı, Azərbaycan</p>
+                <p class="mt-4 text-gray-500 italic">İş saatları: B.e - Cümə, 09:00 - 18:00</p>
+            </div>
+
+            <!-- Google Map -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-semibold text-gray-900">Xəritədə Biz</h3>
+                <div class="mt-4">
+                    <iframe 
+                        class="w-full h-64 rounded-md" 
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.0388753109!2d49.961966000000004!3d40.385831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4030636f5a018be1%3A0xe23eaaf78ec0293!2zTcmZemFoaXIgUsO8c3TJmW1vdiBrw7zDp8mZc2kgMTU1!5e0!3m2!1sen!2saz!4v1743112877307!5m2!1sen!2saz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Əlaqə -->
+    <section class="max-w-6xl mx-auto bg-blue-500 text-white p-10 rounded-lg shadow-lg text-center">
+        <h2 class="text-3xl font-bold">Bizə Yazın</h2>
+        <form class="mt-6 space-y-4">
+            <input type="text" placeholder="Adınız" class="w-full p-3 rounded-md text-black">
+            <input type="email" placeholder="E-poçt ünvanınız" class="w-full p-3 rounded-md text-black">
+            <textarea placeholder="Mesajınızı yazın..." class="w-full p-3 rounded-md text-black"></textarea>
+            <button class="bg-yellow-300 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition duration-300">
+                Göndər
+            </button>
+        </form>
+    </section>
+   
+    <section class="footersec">
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-2xl font-semibold">Bizimlə Əlaqə</h2>
+    
+            <div class="mt-4 flex flex-wrap justify-center gap-6">
+                <!-- Telefon -->
+                <a href="tel:+994501234567" class="flex items-center gap-2 hover:text-yellow-400 transition duration-300">
+                    📞 +994 51 629 16 86 
+                </a>
+    
+    
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/progress.college" target="_blank" class="flex items-center gap-2 hover:text-pink-400 transition duration-300">
+                    📷 Instagram
+                </a>
+    
+                <!-- Location -->
+                <a href="https://www.google.com/maps/place/M%C9%99zahir+R%C3%BCst%C9%99mov+k%C3%BC%C3%A7%C9%99si+155/@40.385831,49.961966,17z/data=!3m1!4b1!4m6!3m5!1s0x4030636f5a018be1:0xe23eaaf78ec0293!8m2!3d40.385831!4d49.961966!16s%2Fg%2F11s641_mmf?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="flex items-center gap-2 hover:text-blue-400 transition duration-300">
+                    📍 Məzahir  Rüstəmov küçəsi,Bakı, Azərbaycan
+                </a>
+            </div>
+    
+            <p class="mt-6 text-gray-400 text-sm">© 2025 Progress College. Bütün hüquqlar qorunur.</p>
+        </div>
+    </footer>
+</section>
+</body>
+</html>
